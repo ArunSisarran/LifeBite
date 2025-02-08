@@ -1,0 +1,127 @@
+/* Global container for the entire page */
+html, body, #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4e1d2; /* Light gray background to match your mockup */
+    display: flex;
+  }
+  
+  /* Top bar with navigation on the left and icon on the right */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a9c78; /* or your preferred color */
+    padding: 0.5rem 1rem;
+    border-bottom: 4px solid black; /* black line as in the mockup */
+    position: sticky;
+  }
+  
+  /* Left side container for the buttons in the top bar */
+  .navbar-left {
+    display: flex;
+    gap: 1rem; /* space between nav buttons */
+  }
+  
+  /* Navigation button styling */
+  .nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Add hover effects, colors, etc. as desired */
+  }
+  
+  /* Wrapper for the left profile section and main content section */
+  .content-container {
+    display: flex;
+    flex: 1; /* take up remaining vertical space */
+  }
+  
+  /* Profile section on the left - “sticky” or fixed positioning to stay put as user scrolls */
+  .profile-section {
+    width: 250px;
+    padding: 1rem;
+    background-color: #d3d3d3; /* matching main background or different if you want contrast */
+    position: sticky;
+    top: 0; /* so it sticks to the top when scrolling */
+    align-self: flex-start; /* so it spans only as tall as content */
+  }
+  
+  /* Profile picture container */
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: red; /* fallback color if no image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* When an actual image is present */
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Blank circle if there's no image */
+  .default-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+  }
+  
+  /* Profile info text */
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* spacing between name, recipes, and bio */
+  }
+  
+  .profile-name,
+  .profile-recipes,
+  .profile-bio {
+    margin: 0;
+  }
+  
+  /* The main section that holds “Recipes” and the grid of recipe cards */
+  .recipe-section {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* “Recipes” heading */
+  .recipes-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Grid of recipe cards (3 per row on larger screens) */
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Individual recipe squares */
+  .recipe-card {
+    background-color: #fff;
+    width: 100%;
+    height: 150px; /* or adjust as needed */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  }
+  
