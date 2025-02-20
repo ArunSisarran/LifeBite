@@ -12,6 +12,11 @@ const DiscoverPage: React.FC = () => {
     name: `Item ${i + 1}`,
   }));
 
+  const handleItemClick = (itemId: number) => {
+    alert(`You clicked on item with ID: ${itemId}`);
+    // You can also add logic here to navigate or open a detailed view
+  };
+
   return (
     <div className="main-container">
       {/* Navbar */}
@@ -38,7 +43,12 @@ const DiscoverPage: React.FC = () => {
       {/* Content Grid */}
       <div className="content-grid">
         {contentList.map((item) => (
-          <div key={item.id} className="content-item">
+          <div
+            key={item.id}
+            className="content-item"
+            onClick={() => handleItemClick(item.id)}
+            style={{ cursor: "pointer" }} // Add pointer cursor to indicate clickability
+          >
             {item.name}
           </div>
         ))}
