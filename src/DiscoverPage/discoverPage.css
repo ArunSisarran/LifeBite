@@ -23,14 +23,13 @@ html, body, #root {
   justify-content: space-evenly; /* Ensures equal space between buttons */
   padding: 15px 20px;
   background-color: #6A9C78;
-  width: 100%; /* Ensures the navbar stretches across the full width */
 }
 
 /* Navigation buttons */
 .nav-button {
   flex: 1;/* Each button takes equal space */
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
   padding: 10px 2px; /* Adjust padding to make buttons the same size */
   border: none;
@@ -60,7 +59,7 @@ html, body, #root {
 
 .search-bar {
   flex-grow: 1;
-  height: 40px;
+  height: 50px;
   font-size: 18px;
   border: 2px solid #ccc;
   background-color: rgba(144, 238, 144, 0.5);
@@ -69,21 +68,10 @@ html, body, #root {
   padding: 5px 15px;
 }
 
-/* Filter Button */
-.filter-button {
-  width: 50px;
-  height: 40px;
-  background-color: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
 /* Content Grid */
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Ensures 4 items per row */
+  grid-template-columns: repeat(5, 1fr); /* Ensures 4 items per row */
   gap: 15px;
   padding: 20px;
   flex-grow: 1;
@@ -104,4 +92,3 @@ html, body, #root {
   border-radius: 5px;
   max-width: 400px; /* Ensures square shape is controlled */
 }
-
