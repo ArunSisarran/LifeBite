@@ -19,7 +19,6 @@ const DiscoverPage: React.FC = () => {
         <button className="nav-button">Profile</button>
         <button className="nav-button">Discover</button>
         <button className="nav-button">Find Ingredients</button>
-        <div className="profile-icon">👤</div>
       </nav>
 
       {/* Divider */}
@@ -34,16 +33,6 @@ const DiscoverPage: React.FC = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button className="filter-button" onClick={() => setShowFilter(!showFilter)}>
-          ☰
-        </button>
-        {showFilter && (
-          <div className="filter-menu">
-            <p>Filter Option 1</p>
-            <p>Filter Option 2</p>
-            <p>Filter Option 3</p>
-          </div>
-        )}
       </div>
 
       {/* Content Grid */}
@@ -59,4 +48,3 @@ const DiscoverPage: React.FC = () => {
 };
 
 export default DiscoverPage;
-
